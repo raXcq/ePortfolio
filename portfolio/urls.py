@@ -1,12 +1,12 @@
 from django.urls import path
-from .views import home, about, resume, portfolio, services, contact
+from . import views
 
 
 urlpatterns = [
-    path("", home, name="home"),
-    path("about/", about, name="about"),
-    path("resume/", resume, name="resume"),
-    path("portfolio/", portfolio, name="portfolio"),
-    path("services/", services, name="services"),
-    path("contact/", contact, name="contact"),
+    path("", views.home, name="home"),
+    path("about/", views.about, name="about"),
+    path("resume/", views.resume, name="resume"),
+    path("portfolio/", views.portfolio, name="portfolio"),
+    path("services/", views.services, name="services"),
+    path("contact/", views.contact, name="contact"),
 ]

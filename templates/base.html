@@ -28,7 +28,21 @@
 
   <!-- Main CSS File -->
   <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+  <script src="{% static 'assets/js/typed.min.js' %}"></script>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var typedStrings = document.querySelector('.typed').getAttribute('data-typed-items').split(',');
+      new Typed('.typed', {
+        strings: typedStrings,
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 2000,
+        loop: true
+      });
+    });
+  </script>
+  
 </head>
 
 <body class="index-page">
@@ -47,12 +61,13 @@
     </a>
 
     <div class="social-links text-center">
-      <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-      <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <a href="https://x.com/_racq_" class="twitter" target="_blank"><i class="bi bi-twitter-x"></i></a>
+      <a href="https://www.facebook.com/racquecordetaofficial" class="facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/racqueme/" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://secure.skype.com/portal/profile/live:.cid.8058e20b0a24f8a4" class="google-plus" target="_blank"><i class="bi bi-skype"></i></a>
+      <a href="https://www.linkedin.com/in/racquecordeta/" class="linkedin" target="_blank"><i class="bi bi-linkedin"></i></a>
     </div>
+    
 
     <nav id="navmenu" class="navmenu">
       <ul>
